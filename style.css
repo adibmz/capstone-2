@@ -31,6 +31,8 @@ a {
 .navbar-nav{
     display: flex;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 header{
     display: flex;
@@ -39,6 +41,14 @@ header{
     padding: 1rem 3rem;
     font-weight: 500;
     position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+.cta-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 .brand{
     font-size: 2rem;
@@ -57,7 +67,8 @@ header{
 }
 .btn {
     border: none;
-    margin-right: 0.75rem;
+    display: inline-block;
+    text-align: center;
     background-color: #1d4ed8;
     color: #fcfdfd;
     border-radius: 20px;
@@ -134,11 +145,58 @@ footer a:hover {
     width: 75%;
 }
 @media screen and (max-width: 768px) {
+    .navbar-nav{
+        gap: 1rem;
+    }
+    .navbar-nav a{
+        font-size: 0.85rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .cta-buttons{
+        flex-direction: column;
+    }
+    .cta-buttons .btn{
+        width: 100%;
+        box-sizing: border-box;
+    }
     .skills{
         flex-direction: column;
+    }
+    .skills div{
+        width: 100%;
     }
     .footer{
         flex-direction: column;
     }
-    
+    .footer .info{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    header{
+        padding: 0.75rem 1rem;
+    }
+    .navbar-nav{
+        gap: 0.6rem;
+    }
+    .navbar-nav a{
+        font-size: 0.75rem;
+    }
+    #home, #skills{
+        padding: 2rem 1.5rem;
+    }
+    #about, #contact{
+        padding: 1.5rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
 }
